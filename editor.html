@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallaron's Food ✨ Meal Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <main class="view-container">
+    
+    <div class="top-nav">
+      <a href="index.html" class="back-btn">
+        <span>←</span> Back to Categories
+      </a>
+      <div class="active-badge" id="currentCategoryBadge">🍳 Meal</div>
+    </div>
+
+    <!-- Add Food Form -->
+    <div class="glass-panel form-section">
+      <div class="panel-header">
+        <h2 id="formTitle">📷 Add Food</h2>
+        <p>Snap a picture of Mom's dish, write what it is, and save it to the vault.</p>
+      </div>
+
+      <form id="foodForm">
+        <div class="form-grid">
+          
+          <div class="input-group">
+            <label for="foodName">Dish Name</label>
+            <input type="text" id="foodName" placeholder="e.g. Sinigang na Baboy" required />
+          </div>
+
+          <div class="input-group">
+            <label for="foodDate">Date Made</label>
+            <input type="date" id="foodDate" required />
+          </div>
+
+          <div class="input-group file-group">
+            <label>Food Photo</label>
+            <div class="file-action-row">
+              <label class="btn-glow-file" for="cameraInput">
+                <span>📸</span> Take Photo
+              </label>
+              <input type="file" id="cameraInput" accept="image/*" capture="environment" />
+
+              <label class="btn-glow-file" for="fileInput">
+                <span>📁</span> Upload Image
+              </label>
+              <input type="file" id="fileInput" accept="image/*" />
+            </div>
+            
+            <div class="preview-stage" id="imagePreviewContainer">
+              <img id="imagePreview" alt="Dish Preview" />
+              <button type="button" id="removePhotoBtn" class="remove-photo">✕</button>
+            </div>
+          </div>
+
+          <div class="input-group full-span">
+            <label for="foodDesc">Mom's Secret / Special Ingredients</label>
+            <textarea id="foodDesc" rows="3" placeholder="What extra spice, secret recipe, or love made it so tasty today?"></textarea>
+          </div>
+
+          <div class="full-span">
+            <button type="submit" class="submit-action-btn">
+              <span>Save Dish to Vault ❤️</span>
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+      <h3 class="gallery-title" id="galleryCategoryTitle">Saved Dishes</h3>
+      <div class="food-grid" id="foodGallery"></div>
+    </div>
+
+  </main>
+
+  <script src="editor.js"></script>
+</body>
+</html>

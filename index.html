@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallaron's Food ✨ Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- Top-Left Family Button -->
+  <div class="top-nav-bar">
+    <button class="family-nav-btn" id="familyOpenBtn">
+      <span class="fam-icon">👨‍👩‍👧‍👦</span>
+      <span>Gallaron Family</span>
+    </button>
+  </div>
+
+  <!-- Family Profiles Modal -->
+  <div id="familyModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2>The Gallaron Family ❤️</h2>
+          <p>The happy eaters behind Mom's kitchen dishes</p>
+        </div>
+        <button class="modal-close-btn" id="familyCloseBtn">✕</button>
+      </div>
+
+      <div class="family-grid">
+        <div class="member-card mom-card">
+          <div class="member-avatar">👩‍🍳</div>
+          <div class="member-info">
+            <h4>Daisy</h4>
+            <span class="member-role highlight-role">Mom (Head Chef)</span>
+            <p>Creating recipes with endless love & special secret flavors.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">👨‍💼</div>
+          <div class="member-info">
+            <h4>Peter</h4>
+            <span class="member-role">Dad</span>
+            <p>Number one fan of Mom's home cooking.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">🧑‍💻</div>
+          <div class="member-info">
+            <h4>Daniel</h4>
+            <span class="member-role">Eldest</span>
+            <p>First in line when lunch and dinner is ready.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">👦</div>
+          <div class="member-info">
+            <h4>JanJan</h4>
+            <span class="member-role">Middle Child</span>
+            <p>Documenting every single meal in Gallaron's Vault!</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">👧</div>
+          <div class="member-info">
+            <h4>Princess</h4>
+            <span class="member-role">Youngest</span>
+            <p>The sweet tooth who never misses midnight snacks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories Grid -->
+  <main class="view-container">
+    <header class="hero-section">
+      <div class="badge-pill">✨ Mom's Kitchen Vault</div>
+      <h1 class="brand-title">Gallaron's <span>Food</span></h1>
+      <p class="hero-subtext">What meal did Mom prepare today? Choose a category to enter.</p>
+    </header>
+
+    <div class="category-grid">
+      <a href="editor.html?category=Breakfast&icon=🍳" class="cat-card">
+        <div class="cat-icon-lg">🍳</div>
+        <div class="cat-details">
+          <h3>Breakfast</h3>
+          <p>Morning favorites & energy starters</p>
+          <span class="cat-counter" id="badge-Breakfast">0 Dishes Logged</span>
+        </div>
+        <span class="arrow-btn">→</span>
+      </a>
+
+      <a href="editor.html?category=Lunch&icon=🍲" class="cat-card">
+        <div class="cat-icon-lg">🍲</div>
+        <div class="cat-details">
+          <h3>Lunch</h3>
+          <p>Hearty afternoon stews & home specials</p>
+          <span class="cat-counter" id="badge-Lunch">0 Dishes Logged</span>
+        </div>
+        <span class="arrow-btn">→</span>
+      </a>
+
+      <a href="editor.html?category=Dinner&icon=🥩" class="cat-card">
+        <div class="cat-icon-lg">🥩</div>
+        <div class="cat-details">
+          <h3>Dinner</h3>
+          <p>Warm evening meals with the family</p>
+          <span class="cat-counter" id="badge-Dinner">0 Dishes Logged</span>
+        </div>
+        <span class="arrow-btn">→</span>
+      </a>
+
+      <a href="editor.html?category=Midnight%20Snacks&icon=🌙" class="cat-card">
+        <div class="cat-icon-lg">🌙</div>
+        <div class="cat-details">
+          <h3>Midnight Snacks</h3>
+          <p>Late night cravings & comfort treats</p>
+          <span class="cat-counter" id="badge-Midnight Snacks">0 Dishes Logged</span>
+        </div>
+        <span class="arrow-btn">→</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
